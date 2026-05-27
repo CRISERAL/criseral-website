@@ -1,7 +1,7 @@
 "use client";
 
 import { X, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Project = {
     id: string;
@@ -170,6 +170,17 @@ function ProjectModal({
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [selectedProject]);
 
     return (
         <section className="relative overflow-hidden border-t border-primary/10 px-6 py-20 md:py-28">
