@@ -1,6 +1,9 @@
 import { Zap } from "lucide-react";
 import { Footer } from "./components/footer";
 import Navbar from "./components/navbar";
+import Hero from "./components/sections/hero";
+import About from "./components/sections/about";
+import Projects from "./components/sections/projects";
 
 const LANDING_FOOTER_COLUMNS = [
   {
@@ -66,6 +69,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
+      <Hero />
+      <About />
+      <Projects />
       <Footer
         logo={
           <div className="flex items-center gap-2">
