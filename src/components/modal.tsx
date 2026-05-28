@@ -7,12 +7,16 @@ interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean
   onClose: () => void
   size?: "sm" | "md" | "lg"
+  footer?: React.ReactNode
+  heading?: React.ReactNode
 }
 
 export function Modal({
   open,
   onClose,
   size = "md",
+  footer,
+  heading,
   className,
   children,
   ...props
@@ -47,24 +51,42 @@ export function Modal({
 
       <div
         className={cn(
-          "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded border border-primary/30 bg-card/95 shadow-[0_0_40px_rgba(var(--primary-rgb,0,180,255),0.08)] backdrop-blur-md",
-          size === "sm" && "w-full max-w-sm",
-          size === "md" && "w-full max-w-lg",
-          size === "lg" && "w-full max-w-2xl",
+          "fixed left-1/2 top-1/2 z-50 flex max-h-[90vh] w-[calc(100vw-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded border border-primary/30 bg-card/95 shadow-[0_0_40px_rgba(var(--primary-rgb,0,180,255),0.08)] backdrop-blur-md",
           className
         )}
         {...props}
       >
-        {/* Scanline */}
-        {/* Body */}
-        <div className="px-5 py-4">
-          {children}
+        <div className="flex flex-col overflow-hidden px-4 py-4 md:px-8 md:py-6">
+          {/* Header */}
+          {heading && (
+            <>
+              <div className="pb-4 md:pb-0">
+                {heading}
+              </div>
+              <div className="mt-4 md:mt-6 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+            </>
+          )}
+          {/* Body */}
+          <div className="flex-1 overflow-y-auto py-4 md:py-6">
+            {children}
+          </div>
+          {/* Footer */}
+          {footer && (
+            <>
+              <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+              <div className="mt-4 md:mt-6">
+                {footer}
+              </div>
+            </>
+          )}
         </div>
+
         {/* Close button */}
         <button
           type="button"
           onClick={onClose}
           className="absolute right-3 top-3 flex h-6 w-6 items-center justify-center rounded text-foreground/30 transition-colors hover:bg-primary/10 hover:text-primary"
+          aria-label="Close"
         >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
             <path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
