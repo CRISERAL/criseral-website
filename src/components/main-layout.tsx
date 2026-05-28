@@ -1,6 +1,7 @@
 import { Zap } from "lucide-react";
 import { Footer } from "../app/components/footer";
 import Navbar from "../app/components/navbar";
+import { SocialFloating } from "../app/components/social-floating";
 
 const LANDING_FOOTER_COLUMNS = [
     {
@@ -87,6 +88,7 @@ export default function MainLayout({
                 socials={LANDING_FOOTER_SOCIALS}
                 copyright={`\u00A9 ${new Date().getFullYear()} Criseral. All rights reserved.`}
             />
+            <SocialFloating />
         </div>
     )
 }
