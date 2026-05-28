@@ -56,7 +56,7 @@ export function SocialFloating() {
 
   React.useEffect(() => {
     const updateRadius = () => {
-      setRadius(window.innerWidth >= 768 ? 110 : 75)
+      setRadius(window.innerWidth >= 768 ? 110 : 95)
     }
     updateRadius()
     window.addEventListener("resize", updateRadius)
@@ -83,7 +83,9 @@ export function SocialFloating() {
   return (
     <div ref={containerRef} className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
       {SOCIALS.map((social, i) => {
-        const angle = (2 * Math.PI * i) / numIcons - Math.PI / 2
+        const startAngle = -Math.PI
+        const endAngle = -Math.PI / 2
+        const angle = startAngle + (endAngle - startAngle) * (i / (numIcons - 1))
         const x = Math.cos(angle) * radius
         const y = Math.sin(angle) * radius
 
