@@ -5,7 +5,6 @@ import { Project } from "@/src/types/project";
 import { useState } from "react";
 import { ProjectCard } from "../../project/components/project-card";
 import { Modal } from "@/src/components/modal";
-import { ExternalLink } from "lucide-react";
 import { ProjectModal } from "../../project/components/project-modal";
 
 
@@ -28,8 +27,8 @@ export default function Projects() {
                         Projects
                     </h2>
                     <p className="mt-4 max-w-2xl text-xs uppercase tracking-widest text-foreground/50 leading-relaxed md:text-sm">
-                        Discover the tools and platforms we have built to empower
-                        developers worldwide.
+                        Explore some of the projects and platforms we have built for
+                        our clients across various industries.
                     </p>
                 </div>
 

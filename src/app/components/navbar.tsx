@@ -5,8 +5,9 @@ import Link from "next/link"
 
 const LANDING_NAV_LINKS = [
     { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Services", href: "#services" },
+    { label: "Process", href: "#process" },
+    { label: "Team", href: "#team" },
     { label: "FAQ", href: "#faq" },
 ]
 
@@ -37,10 +38,10 @@ export default function Navbar() {
                         </a>
                     ))}
                     <a
-                        href="#pricing"
+                        href="#contact"
                         className="rounded border border-primary bg-primary/20 px-4 py-1.5 text-[10px] uppercase tracking-widest text-primary shadow-[0_0_12px_rgba(var(--primary-rgb,0,180,255),0.15)] transition-all duration-300 hover:bg-primary/30"
                     >
-                        Get Started
+                        Contact Us
                     </a>
                 </div>
 
@@ -73,11 +74,11 @@ export default function Navbar() {
                             </a>
                         ))}
                         <a
-                            href="#pricing"
+                            href="#contact"
                             onClick={() => setMobileMenuOpen(false)}
                             className="mt-2 rounded border border-primary bg-primary/20 px-4 py-2 text-center text-[10px] uppercase tracking-widest text-primary"
                         >
-                            Get Started
+                            Contact Us
                         </a>
                     </div>
                 </div>

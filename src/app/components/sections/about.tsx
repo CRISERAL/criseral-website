@@ -14,17 +14,17 @@ export default function About() {
                         Who We Are
                     </h2>
                     <p className="mt-4 max-w-2xl text-xs uppercase tracking-widest text-foreground/50 leading-relaxed md:text-sm">
-                        We are a team of passionate engineers and designers committed to
-                        building the modern web development tools.
+                        We are a team of passionate engineers, designers, and strategists
+                        dedicated to building exceptional digital products for our clients.
                     </p>
                 </div>
 
                 {/* Stats */}
                 <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded border border-primary/10 bg-primary/10 md:grid-cols-4">
                     {[
-                        { value: "10K+", label: "Users" },
-                        { value: "500+", label: "Components" },
-                        { value: "99.9%", label: "Uptime" },
+                        { value: "50+", label: "Projects Delivered" },
+                        { value: "30+", label: "Happy Clients" },
+                        { value: "5+", label: "Years Experience" },
                         { value: "24/7", label: "Support" },
                     ].map((stat) => (
                         <div
@@ -48,19 +48,19 @@ export default function About() {
                             number: "01",
                             title: "Innovation",
                             description:
-                                "We push the boundaries of what is possible in web development with cutting-edge tools and frameworks.",
+                                "We leverage cutting-edge technologies and modern architectures to build solutions that stand the test of time.",
                         },
                         {
                             number: "02",
                             title: "Quality",
                             description:
-                                "Every component and tool is rigorously tested to ensure the highest standards of performance and reliability.",
+                                "Every line of code is reviewed, tested, and optimized to deliver reliable, performant, and secure software.",
                         },
                         {
                             number: "03",
-                            title: "Community",
+                            title: "Commitment",
                             description:
-                                "Built by developers, for developers. Our open-source ecosystem thrives on collaboration and feedback.",
+                                "We partner with our clients from ideation to launch, ensuring transparent communication and on-time delivery.",
                         },
                     ].map((value) => (
                         <div

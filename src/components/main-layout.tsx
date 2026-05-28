@@ -4,30 +4,30 @@ import Navbar from "../app/components/navbar";
 
 const LANDING_FOOTER_COLUMNS = [
     {
-        title: "Product",
+        title: "Services",
         links: [
-            { label: "Components", href: "/components" },
-            { label: "Templates", href: "/templates" },
-            { label: "Themes", href: "#" },
-            { label: "Changelog", href: "#" },
+            { label: "Web Development", href: "#services" },
+            { label: "Mobile Apps", href: "#services" },
+            { label: "UI/UX Design", href: "#services" },
+            { label: "Cloud Solutions", href: "#services" },
         ],
     },
     {
-        title: "Resources",
+        title: "Company",
         links: [
-            { label: "Documentation", href: "#" },
-            { label: "Getting Started", href: "#" },
-            { label: "Examples", href: "#" },
-            { label: "API Reference", href: "#" },
+            { label: "About Us", href: "#about" },
+            { label: "Our Team", href: "#team" },
+            { label: "Projects", href: "#projects" },
+            { label: "Careers", href: "#" },
         ],
     },
     {
-        title: "Community",
+        title: "Support",
         links: [
-            { label: "GitHub", href: "#", external: true },
-            { label: "Discord", href: "#", external: true },
-            { label: "Twitter", href: "#", external: true },
-            { label: "Blog", href: "#" },
+            { label: "FAQ", href: "#faq" },
+            { label: "Contact", href: "#contact" },
+            { label: "Privacy Policy", href: "#" },
+            { label: "Terms of Service", href: "#" },
         ],
     },
 ]

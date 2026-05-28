@@ -12,30 +12,30 @@ export default function Hero() {
                 <div className="inline-flex items-center gap-1.5 rounded border border-primary/20 bg-primary/5 px-3 py-1">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                     <span className="text-[10px] uppercase tracking-widest text-primary">
-                        Modern SaaS Platform
+                        Software Development Agency
                     </span>
                 </div>
 
                 {/* Heading */}
                 <h1 className="mt-6 text-4xl font-bold uppercase tracking-widest md:text-6xl lg:text-7xl">
-                    Build Faster
+                    We Build
                     <br />
-                    <span className="text-primary">With Criseral</span>
+                    <span className="text-primary">Digital Solutions</span>
                 </h1>
 
                 {/* Description */}
                 <p className="mt-6 max-w-2xl text-xs uppercase tracking-widest text-foreground/50 leading-relaxed md:text-sm">
-                    A modern, type-safe platform for building exceptional web experiences.
-                    Ship faster with our comprehensive suite of tools and components.
+                    We transform ideas into powerful software experiences. From web and mobile
+                    apps to scalable cloud solutions — we craft technology that drives growth.
                 </p>
 
                 {/* CTAs */}
                 <div className="mt-10 flex items-center gap-4">
                     <a
-                        href="#pricing"
+                        href="#services"
                         className="rounded border border-primary bg-primary px-6 py-3 text-[10px] uppercase tracking-widest text-primary-foreground shadow-[0_0_24px_var(--primary)] transition-all duration-300 hover:bg-primary/90"
                     >
-                        Get Started
+                        Our Services
                     </a>
                     <a
                         href="#features"
