@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Oxanium } from "next/font/google";
 import { cn } from "@/src/lib/utils";
+import MainLayout from "../components/main-layout";
 
 const oxanium = Oxanium({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -19,7 +20,11 @@ export default function RootLayout({
     <html
       lang="en" className={cn("font-sans", oxanium.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <MainLayout>
+          {children}
+        </MainLayout>
+      </body>
     </html>
   );
 }
