@@ -8,7 +8,7 @@ export function ProjectModal({
     project
 }: Props) {
     return (
-        <div className="relative max-h-[80vh] w-full overflow-y-auto bg-background">
+        <div className="relative max-h-[80vh] w-full bg-background">
             <span className="text-[10px] font-semibold uppercase tracking-widest text-primary">
                 {project.category}
             </span>
@@ -16,7 +16,7 @@ export function ProjectModal({
                 {project.title}
             </h2>
             <div className="my-6 h-px bg-linear-to-r from-primary/40 via-primary/20 to-transparent" />
-            <p className="text-xs uppercase tracking-widest text-foreground/60 leading-relaxed md:text-sm">
+            <p className="max-h-[40vh] overflow-y-auto text-xs uppercase tracking-widest text-foreground/60 leading-relaxed md:text-sm">
                 {project.fullDescription}
             </p>
             <div className="mt-8 flex flex-wrap gap-2">

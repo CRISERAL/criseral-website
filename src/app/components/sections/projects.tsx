@@ -1,11 +1,12 @@
 "use client";
 
-import { Modal } from "@/src/components/open-modal";
 import { PROJECTS } from "@/src/mock/projects.mock";
 import { Project } from "@/src/types/project";
 import { useState } from "react";
-import { ProjectModal } from "../../project/components/project-modal";
 import { ProjectCard } from "../../project/components/project-card";
+import { Modal } from "@/src/components/modal";
+import { ExternalLink } from "lucide-react";
+import { ProjectModal } from "../../project/components/project-modal";
 
 
 export default function Projects() {
@@ -47,11 +48,12 @@ export default function Projects() {
                     ))}
                 </div>
             </div>
-            <Modal open={open} onClose={() => setOpen(false)}>
-                {selectedProject && (
+            {selectedProject && (
+                <Modal open={open} onClose={() => setOpen(false)}>
                     <ProjectModal project={selectedProject} />
-                )}
-            </Modal>
+                </Modal>
+            )}
+
         </section>
     );
 }
